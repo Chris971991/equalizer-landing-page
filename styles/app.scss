@@ -20,13 +20,16 @@ $border-radius: 12px;
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 // Initialise Styles
 body {
   font-family: "IBM Plex Sans", sans-serif;
   background: url(../assets/bg-main-desktop.png);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-position: top -300px center;
 }
 
 // Typography
@@ -77,6 +80,7 @@ body {
   letter-spacing: -0.18px;
   transition: background-color 0.2s ease-in-out;
   margin-bottom: 16px;
+  cursor: pointer;
 
   &:hover {
     background-color: $cyan;
@@ -99,20 +103,41 @@ body {
   letter-spacing: -0.18px;
   transition: background-color 0.2s ease-in-out;
   margin-bottom: 16px;
+  cursor: pointer;
 
   &:hover {
     background-color: $yellow;
   }
 }
 
+.button-icon {
+  &__ios {
+    margin-right: 8px;
+  }
+
+  &__android {
+    margin-right: 8px;
+  }
+}
+
 // Begin Styles
 
-.top-pattern {
-  position: sticky;
-  width: 312px;
-  height: 468px;
-  left: 1111px;
-  top: -40px;
+// Using main to hold the second pattern
+.main {
+  margin: 0 auto;
+  max-width: 1420px;
+  position: relative;
+}
+
+.main:after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url(../assets/bg-pattern-1.svg) no-repeat top right;
 }
 
 .content-container {
@@ -153,7 +178,7 @@ body {
     width: 312px;
     height: 468px;
     left: 336px;
-    top: 0px;
+    top: -40px;
     z-index: 0;
   }
 
@@ -235,8 +260,20 @@ body {
     padding: 30px 0;
     justify-self: end;
 
-    &__icon {
-      padding-left: 20px;
+    svg path {
+      transition: 0.1s ease-in-out;
     }
+
+    svg:hover path {
+      fill: #fa7453;
+    }
+  }
+}
+
+.__icon {
+  margin-right: 20px;
+
+  &:hover {
+    cursor: pointer;
   }
 }
