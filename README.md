@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Front End Mentor Solution](https://www.frontendmentor.io/solutions/equalizer-landing-page-ZeW6G_W-o)
-- Live Site URL: [Hosted on Github](https://chris971991.github.io/social-proof-section-master/)
+- Live Site URL: [Hosted on Github](https://chris971991.github.io/equalizer-landing-page/)
 
 ## My process
 
